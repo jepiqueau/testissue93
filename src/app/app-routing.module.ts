@@ -11,6 +11,12 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'copyfromassets',
+    loadChildren: () => import('./copyfromassets/copyfromassets.module')
+                      .then( m => m.CopyfromassetsPageModule)
+  },
+
 ];
 
 @NgModule({
